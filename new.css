@@ -1,0 +1,43 @@
+.container
+{
+    width: 480px;
+    height: 800px;
+    margin: auto;
+    background: #dcdcdc ;
+}
+
+header
+{
+    height: 56px;
+    width: 480px;
+    background: #FF5252 ;
+    margin: auto;
+    position: absolute;
+}
+
+.fa-film
+{
+    float: left;
+    margin: 5px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.title
+{
+    float: left;
+    margin: 5px 70px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: roboto;
+}        
+
+.fa-times
+{
+    float: right;
+    margin: 5px;
+    padding: 10px;
+}
+
+.movie-pic {width: 480px;  height:216px; position:absolute; margin-top:56px}
+
