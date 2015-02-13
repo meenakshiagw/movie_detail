@@ -40,7 +40,7 @@ function func()
       li.setAttribute('class', 'image-movie');
       ul.appendChild(li);
       li.appendChild(a);
-      a.setAttribute('href', '');
+      a.setAttribute('href', 'details.html?a='+data.results[i]["id"]);
       a.appendChild(imagediv);
       imagediv.setAttribute('class', 'image-div');
 

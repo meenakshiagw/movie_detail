@@ -80,25 +80,23 @@ section
 		color-stop(0.86, #FFEBEE));
 }
 
-.movie-pic 
-{
-	width: 468px;  
-	height: 216px; 
-	border: 1px solid;
+#movie-poster {
+	width: 100%;
+	height: 300px;
 }
 
 .movie-name 
 {
+
 	margin-top: 8px;
 	margin-bottom: 8px;
 	margin-left: 8px;
 	margin-right: 8px;
-	width: 432px;
-	text-align: left;  
-	font-weight: 400;
+	text-align: left;
+	font-size: 18px;  
+	font-weight: 900;
 	height: 48px;
 	padding: 3px 10px;
-	border: 1px solid blue;
 }
 
 .movie-details 
@@ -107,17 +105,13 @@ section
 	margin-bottom: 8px;
 	margin-left: 8px;
 	margin-right: 8px;
-	width: 432px;
 	text-align: left; 
 	font-weight: 400;
-	height: 128px;
-	border: 1px solid red;
 	padding: 3px 10px;
 }
 
 .movie-synopsis
 {
-	width: 432px;
 	margin-top: 8px;
 	margin-left: 8px;
 	margin-bottom: 8px;
@@ -125,12 +119,15 @@ section
 	margin-right: 8px;
 	font-weight: 300;
 	padding: 3px 10px;
-	border: 1px solid green;
+}
+
+tr th {
+	width: 200px;
+	vertical-align: top;
 }
 
 .movie-review
 {
-	width: 432px;
 	margin-top: 8px;
 	margin-left: 8px;
 	margin-bottom: 8px;
@@ -138,18 +135,15 @@ section
 	margin-right: 8px;
 	font-weight: 300;
 	padding: 3px 10px;
-	border: 1px solid pink;
 }
 
 h4
 {
-	width: 432px;
 	margin-top: 8px;
 	margin-left: 8px;
 	margin-bottom: 8px;
 	margin-left: 8px;
 	margin-right: 8px;
-	font-weight: 300;
+	font-weight: 800;
 	padding: 3px 10px;
-	border: 1px solid yellow;
 }

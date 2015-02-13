@@ -1,4 +1,4 @@
-function image_fun(){
+function details(){
 
   var parts = window.location.href.split('?')[1].split('=');
   getJSON("http://api.themoviedb.org/3/movie/"+parts[1]+"?api_key=11f47f644c4ac312a64a760d25516450").then(function(data) {
@@ -37,7 +37,7 @@ function image_fun(){
 
 
     var director = document.getElementById("director");
-    var reviews = document.getElementById("reviews");
+    var reviews = document.getElementById("movie-review");
     },function(status) {
         alert("hi"+status);
     });
