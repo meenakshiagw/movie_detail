@@ -45,13 +45,6 @@ header
 	font-size: 20px;
 }		
 
-.fa-times
-{
-	float: right;
-	margin: 5px;
-	padding: 10px;
-}
-
 ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -111,7 +104,7 @@ section
 	height: 102px;
 }
 
-img
+.image
 {
 	float:left;
 	margin-top: 8px;
