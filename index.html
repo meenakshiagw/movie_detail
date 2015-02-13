@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movieholic</title>
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+	<header>
+		<div>
+			<i class="fa fa-chevron-left"></i>
+			<p>gbkjgb</p>
+		</div>
+	</header>
+</body>
+<script type="text/javascript">
+		var Request = new XMLHttpRequest();
+
+		Request.open('GET', 'http://api.themoviedb.org/3/movie/top_rated');
+
+		Request.setRequestHeader('Accept', 'application/json');
+
+		Request.onreadystatechange = function () {
+			if (this.readyState === 4) {
+				console.log('Status:', this.status);
+				console.log('Headers:', this.getAllResponseHeaders());
+				console.log('Body:', this.responseText);
+			}
+		};
+
+		Request.send(JSON.stringify(body));
+		console.log('arun')
+	</script>
+</html>
