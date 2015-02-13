@@ -85,16 +85,35 @@ section
 	width: 480px;
 }
 
+li {
+	list-style: none;
+}
+
 .menu ul li {
 	background: white;
 }
 
-.image {
-	margin-top: 8px;
+img {
+	margin-top: -32px;
 	margin-bottom: 8px;
 	margin-right: 8px;
 	width: 112px;
 	height: 144px;
+}
+
+.image-div {
+	float: left;
+}
+
+.image-movie {
+	width: 460;
+	height: 144px;
+	clear: both;
+}
+
+.movie ul {
+	margin-left: 72px;
+	margin-top: 56px;
 }
 
 .menu li
