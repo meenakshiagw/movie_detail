@@ -72,8 +72,6 @@ header
 .menu
 {
 	position: absolute;
-	width: 448px;
-	height: 744px;
 	margin-left: 16px;
 	margin-right: 16px;
 }
@@ -87,31 +85,16 @@ section
 	width: 480px;
 }
 
-.menu ul li
-{
-	clear:both;
+.menu ul li {
 	background: white;
 }
 
-.movie
-{
-	float:left;
-	border: 1px solid blue;
-	margin-left: 8px;
-	margin-top: 8px;
-	padding: 5px 10px;
-	width: 280px;
-	height: 102px;
-}
-
-.image
-{
-	float:left;
+.image {
 	margin-top: 8px;
 	margin-bottom: 8px;
 	margin-right: 8px;
-	height: 112px;
 	width: 112px;
+	height: 144px;
 }
 
 .menu li
