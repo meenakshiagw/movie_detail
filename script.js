@@ -32,10 +32,10 @@ function func()
       var image = document.createElement("img");
       var movie_name_li = document.createElement("li");
       var movie_rating_li = document.createElement("li");
-      var movie_release_li = document.createElement("li");
+      
       var movie_name = document.createTextNode(data.results[i]["title"]);
       var movie_rating = document.createTextNode('Rating : '+data.results[i]["vote_average"]);
-      var movie_release = document.createTextNode('Release Date : '+data.results[i]["release_date"]);
+     
 
       li.setAttribute('class', 'image-movie');
       ul.appendChild(li);
@@ -54,10 +54,10 @@ function func()
 
       newul.appendChild(movie_name_li);
       newul.appendChild(movie_rating_li);
-      newul.appendChild(movie_release_li);
+    
       movie_name_li.appendChild(movie_name);
       movie_rating_li.appendChild(movie_rating);
-      movie_release_li.appendChild(movie_release);
+    
 
     }
 
