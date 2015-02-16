@@ -32,17 +32,17 @@ function func()
       var image = document.createElement("img");
       var movie_name_li = document.createElement("li");
       var movie_rating_li = document.createElement("li");
-      var movie_release_li = document.createElement("li");
+      
       var movie_name = document.createTextNode(data.results[i]["title"]);
       var movie_rating = document.createTextNode('Rating : '+data.results[i]["vote_average"]);
-      var movie_release = document.createTextNode('Release Date : '+data.results[i]["release_date"]);
+     
 
-      li.setAttribute('class', 'image-movie');
+      li.setAttribute('class', 'image-movie hvr-grow');
       ul.appendChild(li);
       li.appendChild(a);
       a.setAttribute('href', 'details.html?a='+data.results[i]["id"]);
       a.appendChild(imagediv);
-      imagediv.setAttribute('class', 'image-div');
+     
 
       imagediv.appendChild(image);
       image.setAttribute('src',"http://image.tmdb.org/t/p/w500"+data.results[i]["poster_path"]);
@@ -54,10 +54,10 @@ function func()
 
       newul.appendChild(movie_name_li);
       newul.appendChild(movie_rating_li);
-      newul.appendChild(movie_release_li);
+    
       movie_name_li.appendChild(movie_name);
       movie_rating_li.appendChild(movie_rating);
-      movie_release_li.appendChild(movie_release);
+    
 
     }
 

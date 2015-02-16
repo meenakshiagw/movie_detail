@@ -1,8 +1,13 @@
 function details(){
 
   var parts = window.location.href.split('?')[1].split('=');
-  getJSON("http://api.themoviedb.org/3/movie/"+parts[1]+"?api_key=11f47f644c4ac312a64a760d25516450").then(function(data) {
-    document.getElementById("movie-poster").src= "http://image.tmdb.org/t/p/w500"+data.poster_path;
+  image_interval(parts[1]);
+  getJSON("http://api.themoviedb.org/3/movie/"+parts[1]+"?api_key=11f47f644c4ac312a64a760d25516450&append_to_response=trailers").then(function(data) {
+    
+
+    document.getElementById("trailer").addEventListener("click", function(){
+    window.location.href="https://www.youtube.com/watch?v="+data.trailers.youtube[0]["source"];
+});
 
     var movie_duration=document.getElementById("movie-duration");
     var title_runtime=document.createTextNode(data.title +" ( "+data.runtime+" minutes )");
@@ -24,20 +29,73 @@ function details(){
     var synopsis_data =document.createTextNode(data.overview);
     synopsis.appendChild(synopsis_data);
 
-    getJSON("http://api.themoviedb.org/3/movie/"+parts[1]+"/credits?api_key=11f47f644c4ac312a64a760d25516450").then(function(new_data){
+    getJSON("http://api.themoviedb.org/3/movie/"+parts[1]+"/credits?api_key=11f47f644c4ac312a64a760d25516450").then(function(data){
     var cast = document.getElementById("cast");
     var i = 0;
-    var text=" "+new_data.cast[0]["name"];
+    var text=" "+data.cast[0]["name"];
     for(i=0;i<6;i++)
     {
-        text=text + ", "+new_data.cast[i]["name"];
+        text=text + ", "+data.cast[i]["name"];
     }
     var cast_data=document.createTextNode(text);
     cast.appendChild(cast_data);
 
+    getJSON("http://api.themoviedb.org/3/movie/"+parts[1]+"/reviews?api_key=11f47f644c4ac312a64a760d25516450").then(function(data){
+ 
+    var review = document.getElementById("review");
 
-    var director = document.getElementById("director");
-    var reviews = document.getElementById("movie-review");
+    var i;
+    var author_span;
+    var content_span;
+    var author_h1;
+    var content_h1;
+    var author_h1_text;
+    var content_h1_text;
+     var author_data;
+     var content_data;
+     var  content_data_span;
+     var author_data_span;
+    for(i=0; i<4; i++)
+    {
+    author_span= document.createElement("span");
+    content_span= document.createElement("span");
+
+    author_h1= document.createElement("h5");
+    content_h1= document.createElement("h5");
+
+
+    author_h1_text=document.createTextNode("author: ");
+    content_h1_text=document.createTextNode("content: ");
+
+    author_data_span=document.createElement("span");
+    author_data_span.setAttribute('class','author_content_span');
+    author_data=document.createTextNode(data.results[i]["author"]);
+
+   content_data_span=document.createElement("span");
+    content_data_span.setAttribute('class','author_content_span');
+    content_data=document.createTextNode(data.results[i]["content"]);
+
+    review.appendChild(author_span);
+    review.appendChild(content_span);
+
+    author_span.appendChild(author_h1);
+    author_span.appendChild(author_data_span);
+
+    content_span.appendChild(content_h1);
+    content_span.appendChild(content_data_span);
+
+    author_h1.appendChild(author_h1_text);
+    content_h1.appendChild(content_h1_text);
+
+    author_data_span.appendChild(author_data);
+    content_data_span.appendChild(content_data);
+
+    }
+
+    },function(status) {
+        alert("hi"+status);
+    });
+
     },function(status) {
         alert("hi"+status);
     });
@@ -64,4 +122,23 @@ var getJSON = function(url) {
         xhr.send();
     });
 };  
+
+var x=0;
+var images =[];
+function displayNextImage(){
+               x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("movie-poster").src = "http://image.tmdb.org/t/p/w500"+images[x];
+          }
+function image_interval(id) {
+    getJSON("http://api.themoviedb.org/3/movie/"+id+"/images?api_key=11f47f644c4ac312a64a760d25516450").then(function(data){
+        for (i=0;i<data.backdrops.length;i++)
+        {
+        images[i]=data.backdrops[i]["file_path"];
+        }
+        document.getElementById("movie-poster").src = "http://image.tmdb.org/t/p/w500"+images[x];
+        setInterval(displayNextImage, 4000);
+         }, function(status) {
+        alert(status);
+    });
+}
 
