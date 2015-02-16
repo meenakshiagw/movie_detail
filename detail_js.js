@@ -45,52 +45,57 @@ function details(){
     var review = document.getElementById("review");
 
     var i;
-    var author_span;
-    var content_span;
-    var author_h1;
-    var content_h1;
-    var author_h1_text;
-    var content_h1_text;
+    var author_div;
+    var content_div;
+    var author_h5;
+    var content_h5;
+    var author_h5_text;
+    var content_h5_text;
      var author_data;
      var content_data;
-     var  content_data_span;
-     var author_data_span;
-    for(i=0; i<4; i++)
-    {
-    author_span= document.createElement("span");
-    content_span= document.createElement("span");
+     var  content_data_p;
+     var author_data_p;
+     var button, button_text;
+    
+    author_div= document.createElement("div");
+    content_div= document.createElement("div");
 
-    author_h1= document.createElement("h5");
-    content_h1= document.createElement("h5");
+    author_h5= document.createElement("h5");
+    content_h5= document.createElement("h5");
 
 
-    author_h1_text=document.createTextNode("author: ");
-    content_h1_text=document.createTextNode("content: ");
+    author_h5_text=document.createTextNode("Author: ");
+    content_h5_text=document.createTextNode("Content: ");
 
-    author_data_span=document.createElement("span");
-    author_data_span.setAttribute('class','author_content_span');
-    author_data=document.createTextNode(data.results[i]["author"]);
+    author_data_p=document.createElement("p");
+    author_data_p.setAttribute('class','author_content_p');
+    author_data=document.createTextNode(data.results[0]["author"]);
 
-   content_data_span=document.createElement("span");
-    content_data_span.setAttribute('class','author_content_span');
-    content_data=document.createTextNode(data.results[i]["content"]);
+   content_data_p=document.createElement("p");
+    content_data_p.setAttribute('class','author_content_p');
+    content_data=document.createTextNode(data.results[0]["content"]);
 
-    review.appendChild(author_span);
-    review.appendChild(content_span);
+    review.appendChild(author_div);
+    review.appendChild(content_div);
 
-    author_span.appendChild(author_h1);
-    author_span.appendChild(author_data_span);
+    author_div.appendChild(author_h5);
+    author_div.appendChild(author_data_p);
 
-    content_span.appendChild(content_h1);
-    content_span.appendChild(content_data_span);
+    content_div.appendChild(content_h5);
+    content_div.appendChild(content_data_p);
 
-    author_h1.appendChild(author_h1_text);
-    content_h1.appendChild(content_h1_text);
+    author_h5.appendChild(author_h5_text);
+    content_h5.appendChild(content_h5_text);
 
-    author_data_span.appendChild(author_data);
-    content_data_span.appendChild(content_data);
+    author_data_p.appendChild(author_data);
+    content_data_p.appendChild(content_data);
 
-    }
+    content_data_p.setAttribute('class','module line-clamp');
+
+    button = document.createElement('button');
+    button_text=document.createTextNode()
+    content_div.appendChild(button);
+    
 
     },function(status) {
         alert("hi"+status);
