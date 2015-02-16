@@ -1,12 +1,109 @@
-@media (max-width: 700px) {
-  .container{
-    width: 100%;
+@media (max-width: 1100px) {
+
+  .movie ul li
+  {
+    background-color: transparent;
+    text-align: left;
+    white-space: nowrap;
+    width: 11em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
   }
-  header{
-		width: 100%;
- 	}
- 	section{
-		width: 100%;
- 	}
+
+  .movie ul li:first-child
+  {
+    font-size: 15px;
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .movie ul li
+  {
+    background-color: transparent;
+    text-align: left;
+    white-space: nowrap;
+    width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+
+  .movie ul li:first-child
+  {
+    font-size: 15px;
+    font-weight: 900;
+  }
 }
  
+
+@media (max-width: 700px) {
+   
+  .movie ul li
+  {
+    background-color: transparent;
+    text-align: left;
+    white-space: nowrap;
+    width: 8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 10px;
+  }
+
+  .movie ul li:first-child
+  {
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  .movie-name 
+  {   
+      margin-top: 100px;
+    -webkit-box-flex: 1;
+  }
+
+  .movie-details 
+  {   
+ 
+    -webkit-box-flex: 1;
+  }
+
+  .movie-synopsis
+  {   
+        -webkit-box-flex: 1;
+  }
+
+  .movie-review
+  {   
+  
+    -webkit-box-flex: 1;
+  }
+
+  .watch_trailer button
+  {
+    margin-top: 95px;
+   -webkit-box-flex: 1;
+  }
+
+  .movie-pic 
+  {  
+    height: 216px; 
+    border: 1px solid;
+    -webkit-box-flex: 1;
+  }
+
+  h4
+  {   
+    -webkit-box-flex: 1;
+  }
+  
+  body
+  {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+  }
+}
+
