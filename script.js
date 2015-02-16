@@ -37,12 +37,12 @@ function func()
       var movie_rating = document.createTextNode('Rating : '+data.results[i]["vote_average"]);
      
 
-      li.setAttribute('class', 'image-movie');
+      li.setAttribute('class', 'image-movie hvr-grow');
       ul.appendChild(li);
       li.appendChild(a);
       a.setAttribute('href', 'details.html?a='+data.results[i]["id"]);
       a.appendChild(imagediv);
-      imagediv.setAttribute('class', 'image-div');
+     
 
       imagediv.appendChild(image);
       image.setAttribute('src',"http://image.tmdb.org/t/p/w500"+data.results[i]["poster_path"]);
