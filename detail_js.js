@@ -45,50 +45,50 @@ function details(){
     var review = document.getElementById("review");
 
     var i;
-    var author_span;
-    var content_span;
-    var author_h1;
-    var content_h1;
-    var author_h1_text;
-    var content_h1_text;
+    var author_div;
+    var content_div;
+    var author_h3;
+    var content_h3;
+    var author_h3_text;
+    var content_h3_text;
      var author_data;
      var content_data;
-     var  content_data_span;
-     var author_data_span;
+     var  content_data_p;
+     var author_data_p;
     for(i=0; i<4; i++)
     {
-    author_span= document.createElement("span");
-    content_span= document.createElement("span");
+    author_div= document.createElement("div");
+    content_div= document.createElement("div");
 
-    author_h1= document.createElement("h5");
-    content_h1= document.createElement("h5");
+    author_h3= document.createElement("h3");
+    content_h3= document.createElement("h3");
 
 
-    author_h1_text=document.createTextNode("author: ");
-    content_h1_text=document.createTextNode("content: ");
+    author_h3_text=document.createTextNode("Author: ");
+    content_h3_text=document.createTextNode("Content: ");
 
-    author_data_span=document.createElement("span");
-    author_data_span.setAttribute('class','author_content_span');
+    author_data_p=document.createElement("p");
+    author_data_p.setAttribute('class','author_content_span');
     author_data=document.createTextNode(data.results[i]["author"]);
 
-   content_data_span=document.createElement("span");
-    content_data_span.setAttribute('class','author_content_span');
+   content_data_p=document.createElement("span");
+    content_data_p.setAttribute('class','author_content_span');
     content_data=document.createTextNode(data.results[i]["content"]);
 
-    review.appendChild(author_span);
-    review.appendChild(content_span);
+    review.appendChild(author_div);
+    review.appendChild(content_div);
 
-    author_span.appendChild(author_h1);
-    author_span.appendChild(author_data_span);
+    author_div.appendChild(author_h3);
+    author_div.appendChild(author_data_p);
 
-    content_span.appendChild(content_h1);
-    content_span.appendChild(content_data_span);
+    content_div.appendChild(content_h3);
+    content_div.appendChild(content_data_p);
 
-    author_h1.appendChild(author_h1_text);
-    content_h1.appendChild(content_h1_text);
+    author_h3.appendChild(author_h3_text);
+    content_h3.appendChild(content_h3_text);
 
-    author_data_span.appendChild(author_data);
-    content_data_span.appendChild(content_data);
+    author_data_p.appendChild(author_data);
+    content_data_p.appendChild(content_data);
 
     }
 
