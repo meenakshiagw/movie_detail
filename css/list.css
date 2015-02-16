@@ -102,7 +102,7 @@ section
 }
 
 .movie ul li:hover{
-	text-overflow: inherit;
+	 text-overflow: inherit;
    overflow: visible;
 }
 
