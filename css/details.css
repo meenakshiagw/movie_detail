@@ -101,6 +101,8 @@ margin-left: 16px;
 	margin: 16px;
 	font-weight: 300;
 	font-size: 32px;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 tr th {
@@ -120,6 +122,8 @@ tr td {
 	font-weight: 400;
 	display: inline-block;
 	font-size: 32px;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 h2
