@@ -82,10 +82,9 @@ margin-left: 16px;
 
 .movie-name 
 {
-
 	margin: 16px;
 	text-align: left;
-	font-size: 43px;  
+	font-size: 52px;  
 	font-weight: 900;
 }
 
@@ -101,18 +100,18 @@ margin-left: 16px;
 {
 	margin: 16px;
 	font-weight: 300;
-	font-size: 24px;
+	font-size: 32px;
 }
 
 tr th {
 	width: 250px;
 	vertical-align: top;
-	font-size: 28px;
+	font-size: 32px;
 	font-weight: 600;
 }
 
 tr td {
-	font-size: 28px;
+	font-size: 32px;
 }
 
 .movie-review
@@ -120,14 +119,14 @@ tr td {
 	margin: 16px;
 	font-weight: 400;
 	display: inline-block;
-	font-size: 24px;
+	font-size: 32px;
 }
 
 h2
 {
 	margin: 16px;
 	font-weight: 800;
-	font-size: 28px;
+	font-size: 34px;
 }
 
 .author_content_span{
